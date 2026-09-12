@@ -1,0 +1,1255 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b10">
+
+<title>AL MAHRAN | Real Estate Investment</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    background:#05070a;
+    color:#fff;
+    font-family:"Cairo",Arial,sans-serif;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page{
+    width:min(100%,540px);
+    min-height:100vh;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 50% 15%,
+        rgba(201,86,69,.12),
+        transparent 35%
+    ),
+    #0b1018;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.page::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(5,8,13,.30),
+        rgba(5,8,13,.48) 40%,
+        rgba(5,8,13,.94) 90%,
+        #080b10 100%
+    ),
+    url("luxury-bg.png") center top / cover no-repeat;
+
+    z-index:0;
+    transform:scale(1.02);
+}
+
+
+/* Decorative lights */
+
+.page::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    top:-170px;
+    left:50%;
+    transform:translateX(-50%);
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(201,86,69,.16),
+        transparent 68%
+    );
+
+    filter:blur(20px);
+    z-index:0;
+    pointer-events:none;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+    position:relative;
+    z-index:2;
+
+    min-height:100vh;
+
+    padding:
+    30px
+    22px
+    28px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    min-height:92px;
+
+    animation:fadeDown .9s ease both;
+}
+
+
+/* BUY */
+
+.buy{
+    font-family:"Montserrat",sans-serif;
+
+    font-size:10px;
+    line-height:2.15;
+
+    letter-spacing:3px;
+
+    color:#d5d7dc;
+
+    text-align:left;
+    direction:ltr;
+}
+
+.buy i{
+    display:block;
+
+    width:52px;
+    height:2px;
+
+    background:#c95645;
+
+    margin-top:9px;
+
+    box-shadow:
+    0 0 12px rgba(201,86,69,.55);
+}
+
+
+/* TAGLINE */
+
+.tagline{
+    text-align:right;
+}
+
+.tagline .script{
+    font-family:cursive;
+
+    font-size:31px;
+    font-style:italic;
+
+    color:#d1d4da;
+
+    line-height:1;
+
+    text-shadow:
+    0 3px 15px rgba(0,0,0,.5);
+}
+
+.tagline small{
+    display:block;
+
+    margin-top:8px;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+
+    line-height:1.5;
+
+    color:#c7c9ce;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand{
+    text-align:center;
+
+    margin-top:5px;
+
+    animation:
+    logoIn 1.1s cubic-bezier(.2,.8,.2,1) both;
+}
+
+
+/* LOGO */
+
+.brand-logo{
+    width:350px;
+    height:165px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:auto;
+
+    filter:
+    drop-shadow(0 15px 28px rgba(0,0,0,.65))
+    drop-shadow(0 0 20px rgba(201,86,69,.10));
+
+    animation:
+    logoFloat 5s ease-in-out infinite;
+}
+
+
+/* BRAND NAME */
+
+.brand h1{
+    margin:-5px 0 0;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:29px;
+    font-weight:500;
+
+    letter-spacing:7px;
+
+    color:#fff;
+
+    text-shadow:
+    0 5px 20px rgba(0,0,0,.6);
+}
+
+.brand .en{
+    margin-top:8px;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+    color:#cfd1d5;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.line{
+    width:72px;
+    height:2px;
+
+    margin:20px auto 16px;
+
+    background:#c95645;
+
+    box-shadow:
+    0 0 14px rgba(201,86,69,.55);
+
+    position:relative;
+}
+
+.line::before,
+.line::after{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    width:5px;
+    height:2px;
+
+    background:#e8d1ae;
+}
+
+.line::before{
+    left:-10px;
+}
+
+.line::after{
+    right:-10px;
+}
+
+
+/* =========================
+   SLOGAN
+========================= */
+
+.ar{
+    text-align:center;
+
+    font-size:17px;
+    font-weight:600;
+
+    color:#f2e3d3;
+
+    text-shadow:
+    0 3px 15px rgba(0,0,0,.6);
+}
+
+.en2{
+    margin-top:5px;
+
+    font-family:"Montserrat",sans-serif;
+
+    text-align:center;
+
+    font-size:8px;
+
+    letter-spacing:2.5px;
+
+    color:#aeb3bb;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:8px;
+
+    margin:
+    25px 0
+    27px;
+}
+
+
+.service{
+    position:relative;
+
+    padding:
+    13px 4px
+    11px;
+
+    text-align:center;
+
+    border:
+    1px solid rgba(255,255,255,.09);
+
+    border-radius:15px;
+
+    background:
+    rgba(255,255,255,.045);
+
+    backdrop-filter:blur(8px);
+
+    -webkit-backdrop-filter:blur(8px);
+
+    box-shadow:
+    inset 0 1px rgba(255,255,255,.06),
+    0 8px 20px rgba(0,0,0,.18);
+
+    transition:
+    transform .25s ease,
+    background .25s ease,
+    border .25s ease;
+}
+
+.service:hover{
+    transform:translateY(-5px);
+
+    background:
+    rgba(255,255,255,.08);
+
+    border-color:
+    rgba(201,86,69,.35);
+}
+
+.service .ico{
+    display:block;
+
+    font-size:22px;
+
+    color:#e4c99f;
+
+    margin-bottom:7px;
+
+    text-shadow:
+    0 0 12px rgba(228,201,159,.18);
+}
+
+.service span{
+    display:block;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:6.5px;
+
+    letter-spacing:.7px;
+
+    color:#d9dadd;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.links{
+    display:grid;
+
+    gap:13px;
+}
+
+
+/* BUTTON */
+
+.btn{
+    min-height:70px;
+
+    border-radius:38px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    color:#fff;
+    text-decoration:none;
+
+    overflow:hidden;
+
+    border:
+    1px solid rgba(255,255,255,.16);
+
+    box-shadow:
+    0 14px 30px rgba(0,0,0,.35),
+    inset 0 1px rgba(255,255,255,.16);
+
+    transition:
+    transform .25s ease,
+    filter .25s ease,
+    box-shadow .25s ease;
+}
+
+
+/* Shine */
+
+.btn::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:70%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        100deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    transform:skewX(-20deg);
+
+    transition:left .65s ease;
+}
+
+.btn:hover::before{
+    left:140%;
+}
+
+.btn:hover{
+    transform:
+    translateY(-4px)
+    scale(1.01);
+
+    filter:brightness(1.08);
+
+    box-shadow:
+    0 18px 35px rgba(0,0,0,.45),
+    0 0 20px rgba(255,255,255,.05);
+}
+
+
+/* ICON */
+
+.btn .icon{
+    position:absolute;
+
+    left:17px;
+
+    direction:ltr;
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    display:grid;
+    place-items:center;
+
+    font-size:21px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.28);
+}
+
+
+/* TEXT */
+
+.btn .txt{
+    text-align:center;
+
+    position:relative;
+    z-index:2;
+}
+
+.btn .txt strong{
+    display:block;
+
+    font-size:15px;
+
+    font-weight:700;
+}
+
+.btn .txt small{
+    display:block;
+
+    margin-top:2px;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    color:rgba(255,255,255,.78);
+
+    direction:ltr;
+}
+
+
+/* ARROW */
+
+.btn .arrow{
+    position:absolute;
+
+    right:20px;
+
+    font-family:Arial,sans-serif;
+
+    font-size:29px;
+
+    font-weight:300;
+
+    opacity:.8;
+}
+
+
+/* FACEBOOK */
+
+.facebook{
+    background:
+    linear-gradient(
+        135deg,
+        #1877f2,
+        #0754ae
+    );
+}
+
+.facebook .icon{
+    color:#1877f2;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp{
+    background:
+    linear-gradient(
+        135deg,
+        #16b968,
+        #078747
+    );
+}
+
+.whatsapp .icon{
+    color:#12a85b;
+
+    font-size:21px;
+}
+
+
+/* =========================
+   TRUST
+========================= */
+
+.trust{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:7px;
+
+    margin:
+    30px 0
+    18px;
+}
+
+.trust .item{
+    text-align:center;
+
+    color:#e6d5bb;
+}
+
+.trust .ico{
+    display:block;
+
+    font-size:21px;
+
+    margin-bottom:5px;
+
+    color:#d9bd91;
+}
+
+.trust b{
+    display:block;
+
+    font-size:9px;
+
+    font-weight:600;
+
+    color:#e9e9e9;
+}
+
+.trust small{
+    font-family:"Montserrat",sans-serif;
+
+    font-size:5.5px;
+
+    letter-spacing:.9px;
+
+    color:#92979f;
+}
+
+
+/* =========================
+   MORE
+========================= */
+
+.more{
+    text-align:center;
+
+    margin-top:auto;
+
+    padding-top:16px;
+}
+
+.more .goldline{
+    width:50px;
+    height:2px;
+
+    background:#c95645;
+
+    margin:
+    0 auto
+    12px;
+
+    box-shadow:
+    0 0 10px rgba(201,86,69,.4);
+}
+
+.more h3{
+    font-family:"Montserrat",sans-serif;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    font-weight:500;
+
+    color:#e1e1e1;
+}
+
+.more p{
+    font-family:"Montserrat",sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:2.5px;
+
+    margin-top:6px;
+
+    color:#9ea2a9;
+}
+
+.copy{
+    font-family:"Montserrat",sans-serif;
+
+    font-size:7px;
+
+    color:#666c73;
+
+    margin-top:18px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-18px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+@keyframes logoIn{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(25px)
+        scale(.88);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0)
+        scale(1);
+    }
+}
+
+
+@keyframes logoFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:380px){
+
+    .content{
+        padding:
+        25px 16px
+        22px;
+    }
+
+    .brand-logo{
+        width:145px;
+        height:145px;
+    }
+
+    .brand h1{
+        font-size:25px;
+        letter-spacing:5px;
+    }
+
+    .ar{
+        font-size:15px;
+    }
+
+    .services{
+        gap:5px;
+    }
+
+    .service{
+        padding:10px 2px;
+    }
+
+    .service .ico{
+        font-size:19px;
+    }
+
+    .btn{
+        min-height:66px;
+    }
+
+    .btn .txt strong{
+        font-size:13px;
+    }
+
+    .btn .icon{
+        width:40px;
+        height:40px;
+        left:14px;
+    }
+
+    .btn .arrow{
+        right:16px;
+    }
+}
+
+
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media(min-width:700px){
+
+    body{
+        padding:25px 0;
+    }
+
+    .page{
+        min-height:
+        calc(100vh - 50px);
+
+        border-radius:28px;
+
+        box-shadow:
+        0 25px 80px rgba(0,0,0,.6);
+
+        border:
+        1px solid rgba(255,255,255,.08);
+    }
+
+    .content{
+        min-height:
+        calc(100vh - 50px);
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<main class="page">
+
+<div class="content">
+
+
+<!-- =========================
+     TOP
+========================= -->
+
+<div class="top">
+
+    <div class="buy">
+        BUY<br>
+        SELL<br>
+        INVEST<br>
+        YOUR<br>
+        FUTURE
+
+        <i></i>
+    </div>
+
+
+    <div class="tagline">
+
+        <div class="script">
+            Building
+        </div>
+
+        <small>
+            A BETTER<br>
+            TOMORROW
+        </small>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     BRAND
+========================= -->
+
+<div class="brand">
+
+    <img
+        class="brand-logo"
+        src="almahran-logo.png"
+        alt="AL MAHRAN Logo"
+    >
+
+    <h1>
+        AL MAHRAN
+    </h1>
+
+    <div class="en">
+        REAL ESTATE INVESTMENT
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     SLOGAN
+========================= -->
+
+<div class="line"></div>
+
+<div class="ar">
+    شريكك الموثوق في عالم العقارات
+</div>
+
+<div class="en2">
+    YOUR TRUSTED PARTNER IN REAL ESTATE
+</div>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<div class="services">
+
+    <div class="service">
+
+        <div class="ico">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <span>
+            RESIDENTIAL
+        </span>
+
+    </div>
+
+
+    <div class="service">
+
+        <div class="ico">
+            <i class="fa-solid fa-building"></i>
+        </div>
+
+        <span>
+            COMMERCIAL
+        </span>
+
+    </div>
+
+
+    <div class="service">
+
+        <div class="ico">
+            <i class="fa-solid fa-umbrella-beach"></i>
+        </div>
+
+        <span>
+            HOLIDAY HOMES
+        </span>
+
+    </div>
+
+
+    <div class="service">
+
+        <div class="ico">
+            <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <span>
+            INVESTMENT
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     SOCIAL LINKS
+========================= -->
+
+<div class="links">
+
+
+    <!-- FACEBOOK -->
+
+    <a
+        class="btn facebook"
+        href="https://www.facebook.com/share/18ceejCuaX/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener"
+    >
+
+        <span class="icon">
+            <i class="fa-brands fa-facebook-f"></i>
+        </span>
+
+        <span class="txt">
+
+            <strong>
+                تابعنا على فيسبوك
+            </strong>
+
+            <small>
+                FACEBOOK
+            </small>
+
+        </span>
+
+        <span class="arrow">
+            ›
+        </span>
+
+    </a>
+
+
+
+    <!-- WHATSAPP 1 -->
+
+    <a
+        class="btn whatsapp"
+        href="https://wa.me/201114965111"
+        target="_blank"
+        rel="noopener"
+    >
+
+        <span class="icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </span>
+
+        <span class="txt">
+
+            <strong>
+                تواصل معنا عبر واتساب
+            </strong>
+
+            <small>
+                WHATSAPP
+            </small>
+
+        </span>
+
+        <span class="arrow">
+            ›
+        </span>
+
+    </a>
+
+
+
+    <!-- WHATSAPP 2 -->
+
+    <a
+        class="btn whatsapp"
+        href="https://wa.me/201119877711"
+        target="_blank"
+        rel="noopener"
+    >
+
+        <span class="icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </span>
+
+        <span class="txt">
+
+            <strong>
+                تواصل معنا عبر واتساب
+            </strong>
+
+            <small>
+                WHATSAPP
+            </small>
+
+        </span>
+
+        <span class="arrow">
+            ›
+        </span>
+
+    </a>
+
+
+</div>
+
+
+
+<!-- =========================
+     TRUST
+========================= -->
+
+<div class="trust">
+
+
+    <div class="item">
+
+        <div class="ico">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <b>
+            مصداقية
+        </b>
+
+        <small>
+            TRUST
+        </small>
+
+    </div>
+
+
+
+    <div class="item">
+
+        <div class="ico">
+            <i class="fa-solid fa-award"></i>
+        </div>
+
+        <b>
+            خبرة
+        </b>
+
+        <small>
+            EXPERIENCE
+        </small>
+
+    </div>
+
+
+
+    <div class="item">
+
+        <div class="ico">
+            <i class="fa-solid fa-chart-pie"></i>
+        </div>
+
+        <b>
+            فرص استثمارية
+        </b>
+
+        <small>
+            OPPORTUNITIES
+        </small>
+
+    </div>
+
+
+
+    <div class="item">
+
+        <div class="ico">
+            <i class="fa-solid fa-users"></i>
+        </div>
+
+        <b>
+            عملاء سعداء
+        </b>
+
+        <small>
+            HAPPY CLIENTS
+        </small>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<div class="more">
+
+    <div class="goldline"></div>
+
+    <h3>
+        MORE THAN PROPERTIES
+    </h3>
+
+    <p>
+        A BRIGHTER FUTURE
+    </p>
+
+    <div class="copy">
+        © AL MAHRAN Real Estate Investment.
+        All Rights Reserved.
+    </div>
+
+</div>
+
+
+</div>
+
+</main>
+
+</body>
+</html>
+```
